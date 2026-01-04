@@ -1,4 +1,3 @@
-Add this to your next.config.ts:
 typescriptimport type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {

@@ -1,9 +1,31 @@
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
-import { cn } from "@/lib/utils"  // ← Add this import
-import React from 'react'
+import { cn } from "@/lib/utils"
+import { FieldError, UseFormRegister } from "react-hook-form"
 
-const InputField = ({ name, label, placeholder, type = "text", register, error, validation, disabled, value }: FormInputProps) => {
+type FormInputProps = {
+  name: string
+  label: string
+  placeholder?: string
+  type?: string
+  register: UseFormRegister<any>
+  error?: FieldError
+  validation?: object
+  disabled?: boolean
+  value?: string
+}
+
+const InputField = ({ 
+  name, 
+  label, 
+  placeholder, 
+  type = "text", 
+  register, 
+  error, 
+  validation = {}, 
+  disabled = false, 
+  value 
+}: FormInputProps) => {
   return (
     <div className="space-y-2">
         <Label htmlFor={name}>
@@ -20,7 +42,6 @@ const InputField = ({ name, label, placeholder, type = "text", register, error, 
             {...register(name, validation)}
         />
 
-        
         {error && <p className="text-sm text-red-500">{error.message}</p>}
     </div>
   )

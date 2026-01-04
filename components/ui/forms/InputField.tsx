@@ -1,19 +1,6 @@
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
-import { FieldError, UseFormRegister } from "react-hook-form"
-
-type FormInputProps = {
-  name: string
-  label: string
-  placeholder?: string
-  type?: string
-  register: UseFormRegister<any>
-  error?: FieldError
-  validation?: object
-  disabled?: boolean
-  value?: string
-}
 
 const InputField = ({ 
   name, 

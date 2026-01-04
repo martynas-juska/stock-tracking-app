@@ -30,7 +30,7 @@ declare global {
         label: string;
         placeholder: string;
         type?: string;
-        register: UseFormRegister<SignUpFormData | SignInFormData>;
+        register: UseFormRegister<any>;
         error?: FieldError;
         validation?: RegisterOptions;
         disabled?: boolean;

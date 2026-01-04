@@ -74,7 +74,7 @@ const SignUp = () => {
                     name="fullName"
                     label="Full Name"
                     placeholder="John Doe"
-                    register={register}
+                    register={register as any}
                     error={errors.fullName}
                     validation={{ required: 'Full name is required', minLength: 2 }}
                 />
@@ -84,7 +84,7 @@ const SignUp = () => {
                     label="E-mail"
                     placeholder="name@gmail.com"
                     type="email"
-                    register={register}
+                    register={register as any}
                     error={errors.email}
                     validation={{
                         required: 'Email is required',
@@ -100,7 +100,7 @@ const SignUp = () => {
                     label="Password"
                     placeholder="Enter your password"
                     type="password"
-                    register={register}
+                    register={register as any}
                     error={errors.password}
                     validation={{ required: 'Password is required', minLength: 8 }}
                 />

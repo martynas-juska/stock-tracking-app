@@ -64,7 +64,7 @@ const SignIn = () => {
                     label="E-mail"
                     placeholder="name@gmail.com"
                     type="email"
-                    register={register}
+                    register={register as any}
                     error={errors.email}
                     validation={{
                         required: 'Email is required',
@@ -80,7 +80,7 @@ const SignIn = () => {
                     label="Password"
                     placeholder="Enter your password"
                     type="password"
-                    register={register}
+                    register={register as any}
                     error={errors.password}
                     validation={{ required: 'Password is required', minLength: 8 }}
                 />
